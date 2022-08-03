@@ -1,0 +1,35 @@
+.container {
+  height: 360px;
+  width: 360px;
+  border: 5px solid #52C60B;
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  cursor: pointer;
+  
+  padding: 40px 0;
+
+  h1 {
+    transition: .2s ease;
+    color: #52C60B;
+  }
+
+  img {
+    width: 200px;
+  }
+
+  transition: .2s ease;
+
+  &:hover {
+    background: #52C60B;
+    transform: scale(1.05);
+
+    h1 {
+      color: #fff;
+    }
+  }
+}

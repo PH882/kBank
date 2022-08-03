@@ -1,0 +1,59 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  
+  .header {
+    height: 106px;
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 68px;
+    background: #52C60B;
+
+    h1 {
+      color: white;
+
+      span {
+        border-radius: 3px;
+        color: #52C60B;
+        background-color: white;
+        padding: 2px;
+        margin-left: 4px;
+      }
+    }
+  }
+  
+  .content {
+    width: 100%;
+    padding: 50px ;
+
+    h1.wellcomeMessage {
+      padding-left: 10px;
+    }
+    
+    .wrapper {
+      width: 100%;
+      height: 1px;
+      margin: 15px 0;
+      background-color: #52C60B;
+    }
+
+    .fieldBalance {
+      padding-left: 10px;
+      
+      p {
+        font-weight: 600;
+        font-size: 20px;
+
+        color: #9D9D9D;
+      }
+    }
+
+    .fieldActionButtons {
+      display: flex;
+      margin-top: 20px;
+      gap: 2rem;
+    }
+  }
+}
+
+
