@@ -3,13 +3,15 @@ import { ActionButton } from '../components/ActionButton';
 import axios from 'axios';
 
 import styles from "../styles/home.module.scss";
+import { Extrato } from '../components/ActionPages/Extrato';
+import { api } from '../services/api';
 
 export default function Home() {
   const [ name, setName ] = useState("");
   const [ balance, setBalance ] = useState(530.68);
 
   useEffect(()=> {
-    axios.get('http://localhost:3000/api/user/informations')
+    api.get('/user/informations')
     .then(res => {
       console.log(res);
 
@@ -30,13 +32,21 @@ export default function Home() {
           <p>Meu saldo</p>
           <h1>{balance.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}</h1>
         </div>
-        <div className={styles.fieldActionButtons}>
-          <ActionButton title="extrato" imageSrc="extrato.svg" />
-          <ActionButton title="sacar" imageSrc="sacar.svg" />
-          <ActionButton title="depositar" imageSrc="depositar.svg" />
-          <ActionButton title="transferir" imageSrc="transferir.svg" />
+
+        <div className={styles.main}>
+          <div className={styles.fieldActionButtons}>
+            <ActionButton title="extrato" imageSrc="extrato.svg" />
+            <ActionButton title="sacar" imageSrc="sacar.svg" />
+            <ActionButton title="depositar" imageSrc="depositar.svg" />
+            <ActionButton title="transferir" imageSrc="transferir.svg" />
+          </div>
+
+          <Extrato />
         </div>
       </div>
+        <div className={styles.footer}>
+          <p>copyright © 2022 kBank</p>
+        </div>
     </div>
   )
 }

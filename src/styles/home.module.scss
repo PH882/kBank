@@ -24,7 +24,7 @@
   
   .content {
     width: 100%;
-    padding: 50px ;
+    padding: 50px;
 
     h1.wellcomeMessage {
       padding-left: 10px;
@@ -48,10 +48,30 @@
       }
     }
 
-    .fieldActionButtons {
+    .main {
       display: flex;
-      margin-top: 20px;
-      gap: 2rem;
+      justify-content: flex-start;
+      gap: 5rem;
+
+      .fieldActionButtons {
+        display: flex;
+        flex-direction: column;
+  
+        margin-top: 20px;
+        gap: 2rem;
+      }
+    }
+  }
+
+  .footer {
+    display: flex;
+    background-color: #52C60B;
+    padding: 20px;
+
+    p {
+      margin: auto;
+      display: flex;
+      text-align: center;
     }
   }
 }
